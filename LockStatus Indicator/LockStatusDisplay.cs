@@ -24,31 +24,26 @@ namespace LockStatus_Indicator
             {
                 Console.WriteLine(state);
                 if (state == false)
-                    picLockStatus.Image = Image.FromFile("c:\\users\\saija_000\\documents\\visual studio 2013\\Projects\\LockStatus Indicator\\LockStatus Indicator\\Resources\\CapsLockOff.png");
+                    picLockStatus.Image = LockStatus_Indicator.Properties.Resources.CapsLockOff;
                 else if (state == true)
-                    picLockStatus.BackgroundImage = Image.FromFile("c:\\users\\saija_000\\documents\\visual studio 2013\\Projects\\LockStatus Indicator\\LockStatus Indicator\\Resources\\CapsLockOn.png");
-
-                picLockStatus.Update();
+                    picLockStatus.BackgroundImage = LockStatus_Indicator.Properties.Resources.CapsLockOn;
             }
             else if (key.Equals("Num"))
             {
                 if (state == false)
-                    picLockStatus.BackgroundImage = Image.FromFile("c:\\users\\saija_000\\documents\\visual studio 2013\\Projects\\LockStatus Indicator\\LockStatus Indicator\\Resources\\NumLockOff.png");
+                    picLockStatus.BackgroundImage = LockStatus_Indicator.Properties.Resources.NumLockOff;
                 else if (state == true)
-                    picLockStatus.BackgroundImage = Image.FromFile("c:\\users\\saija_000\\documents\\visual studio 2013\\Projects\\LockStatus Indicator\\LockStatus Indicator\\Resources\\NumLockOn.png");
-
-                picLockStatus.Update();
+                    picLockStatus.BackgroundImage = LockStatus_Indicator.Properties.Resources.NumLockOn;
             }
             else if (key.Equals("Scroll"))
             {
                 if (state == false)
-                    picLockStatus.BackgroundImage = Image.FromFile("c:\\users\\saija_000\\documents\\visual studio 2013\\Projects\\LockStatus Indicator\\LockStatus Indicator\\Resources\\ScrollLockOff.png");
+                    picLockStatus.BackgroundImage = LockStatus_Indicator.Properties.Resources.ScrollLockOff;
                 else if (state == true)
-                    picLockStatus.BackgroundImage = Image.FromFile("c:\\users\\saija_000\\documents\\visual studio 2013\\Projects\\LockStatus Indicator\\LockStatus Indicator\\Resources\\ScrollLockOn.png");
-
-                picLockStatus.Update();
+                    picLockStatus.BackgroundImage = LockStatus_Indicator.Properties.Resources.ScrollLockOn;
             }
 
+            picLockStatus.Update();
             
             killTimer.Interval = 800;
             killTimer.Start();

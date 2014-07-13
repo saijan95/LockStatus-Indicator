@@ -11,3 +11,16 @@ C:\Users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\Lo
 C:\Users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\bin\Debug\LockStatus Indicator.application
 C:\Users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.exe.manifest
 C:\Users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.application
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\bin\Debug\LockStatus Indicator.exe.config
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.exe
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.pdb
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\bin\Debug\LockStatus Indicator.exe.manifest
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\bin\Debug\LockStatus Indicator.application
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\bin\Debug\LockStatus Indicator.exe
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\bin\Debug\LockStatus Indicator.pdb
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.csprojResolveAssemblyReference.cache
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\obj\Debug\LockStatus_Indicator.frmLockStatusDisplay.resources
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\obj\Debug\LockStatus_Indicator.Properties.Resources.resources
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.csproj.GenerateResource.Cache
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.exe.manifest
+C:\Users\saija_000\Documents\GitHub\LockStatus-Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.application

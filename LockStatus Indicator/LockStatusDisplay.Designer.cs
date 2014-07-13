@@ -40,6 +40,7 @@
             this.picLockStatus.Location = new System.Drawing.Point(0, 0);
             this.picLockStatus.Name = "picLockStatus";
             this.picLockStatus.Size = new System.Drawing.Size(250, 250);
+            this.picLockStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLockStatus.TabIndex = 0;
             this.picLockStatus.TabStop = false;
             // 
