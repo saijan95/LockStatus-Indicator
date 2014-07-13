@@ -1,0 +1,13 @@
+c:\users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\bin\Debug\LockStatus Indicator.exe.config
+c:\users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.csprojResolveAssemblyReference.cache
+c:\users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\obj\Debug\LockStatus_Indicator.Properties.Resources.resources
+c:\users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.csproj.GenerateResource.Cache
+c:\users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\bin\Debug\LockStatus Indicator.exe
+c:\users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\bin\Debug\LockStatus Indicator.pdb
+c:\users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.exe
+c:\users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.pdb
+c:\users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\obj\Debug\LockStatus_Indicator.frmLockStatusDisplay.resources
+C:\Users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\bin\Debug\LockStatus Indicator.exe.manifest
+C:\Users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\bin\Debug\LockStatus Indicator.application
+C:\Users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.exe.manifest
+C:\Users\saija_000\documents\visual studio 2013\Projects\LockStatus Indicator\LockStatus Indicator\obj\Debug\LockStatus Indicator.application
