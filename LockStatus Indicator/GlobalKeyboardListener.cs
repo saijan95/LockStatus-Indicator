@@ -25,13 +25,11 @@ namespace LockStatus_Indicator
         private const int VK_SCROLL = 0x91;
         private KeyboardProc keyboardProc;
         private IntPtr hhk;
-        private Boolean capsLock, numLock, scrollLock;
+        private bool capsLock, numLock, scrollLock;
 
         public GlobalKeyboardListener()
         {
-            capsLock = (GetKeyState(VK_CAPITAL) & 1) == 1;
-            numLock = (GetKeyState(VK_NUMLOCK) & 1) == 1;
-            scrollLock = (GetKeyState(VK_SCROLL) & 1) == 1;
+            calibrate();
         }
 
         public void startListening()
@@ -61,28 +59,36 @@ namespace LockStatus_Indicator
                 int vkCode = Marshal.ReadInt32(lParam);
                 LockStatusIndicator lockStatusIndicator;
 
-                if (vkCode == VK_CAPITAL)
+                if (vkCode == VK_CAPITAL) 
                 {
-                    capsLock = !(capsLock);
-                    lockStatusIndicator = new LockStatusIndicator("Caps", capsLock);
+                    capsLock = !capsLock;
+                    lockStatusIndicator = new LockStatusIndicator("Caps", capsLock);   
                 }
                     
-                else if(vkCode == VK_NUMLOCK)
+                else if(vkCode == VK_NUMLOCK) 
                 {
-                    numLock = !(numLock);
+                    numLock = !numLock;
                     lockStatusIndicator = new LockStatusIndicator("Num", numLock);
                 }
                     
                 else if(vkCode == VK_SCROLL)
                 {
-                    scrollLock = !(scrollLock);
+                    scrollLock = !scrollLock;
                     lockStatusIndicator = new LockStatusIndicator("Scroll", scrollLock);
                 }
+                    
                     
                 lockStatusIndicator = null;
                 GC.Collect();
             }
             return CallNextHookEx(hhk, nCode, wParam, lParam);
+        }
+
+        private void calibrate()
+        {
+            capsLock = (GetKeyState(VK_CAPITAL) & 1) == 1;
+            numLock = (GetKeyState(VK_NUMLOCK) & 1) == 1;
+            scrollLock = (GetKeyState(VK_SCROLL) & 1) == 1;
         }
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
