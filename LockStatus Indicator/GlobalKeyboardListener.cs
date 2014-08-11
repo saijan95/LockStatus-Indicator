@@ -36,10 +36,12 @@ namespace LockStatus_Indicator
         {
             keyboardProc = callNextHook;
             hhk = setHook(keyboardProc);
-            Application.Run(); 
+            Application.Run();
         }
-        ~GlobalKeyboardListener()
+
+        private void stopListening()
         {
+            Application.Exit();
             UnhookWindowsHookEx(hhk);
         }
 
@@ -76,8 +78,7 @@ namespace LockStatus_Indicator
                     scrollLock = !scrollLock;
                     lockStatusIndicator = new LockStatusIndicator("Scroll", scrollLock);
                 }
-                    
-                    
+
                 lockStatusIndicator = null;
                 GC.Collect();
             }
@@ -108,11 +109,13 @@ namespace LockStatus_Indicator
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true, CallingConvention = CallingConvention.Winapi)]
         public static extern short GetKeyState(int keyCode);
-
+       
         public static void Main(String[] args)
         {
-            Thread globalKeyboardListener = new Thread(new ThreadStart(new GlobalKeyboardListener().startListening));
-            globalKeyboardListener.Start();
+            GlobalKeyboardListener gkl = new GlobalKeyboardListener();
+
+            Thread gklThread = new Thread(new ThreadStart(gkl.startListening));
+            gklThread.Start();
         }
     }
 }

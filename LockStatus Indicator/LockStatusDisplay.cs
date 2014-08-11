@@ -22,25 +22,24 @@ namespace LockStatus_Indicator
 
             if (key.Equals("Caps"))
             {
-                Console.WriteLine(state);
                 if (state == false)
                     picLockStatus.Image = LockStatus_Indicator.Properties.Resources.CapsLockOff;
                 else if (state == true)
-                    picLockStatus.BackgroundImage = LockStatus_Indicator.Properties.Resources.CapsLockOn;
+                    picLockStatus.Image = LockStatus_Indicator.Properties.Resources.CapsLockOn;
             }
             else if (key.Equals("Num"))
             {
                 if (state == false)
-                    picLockStatus.BackgroundImage = LockStatus_Indicator.Properties.Resources.NumLockOff;
+                    picLockStatus.Image = LockStatus_Indicator.Properties.Resources.NumLockOff;
                 else if (state == true)
-                    picLockStatus.BackgroundImage = LockStatus_Indicator.Properties.Resources.NumLockOn;
+                    picLockStatus.Image = LockStatus_Indicator.Properties.Resources.NumLockOn;
             }
             else if (key.Equals("Scroll"))
             {
                 if (state == false)
-                    picLockStatus.BackgroundImage = LockStatus_Indicator.Properties.Resources.ScrollLockOff;
+                    picLockStatus.Image = LockStatus_Indicator.Properties.Resources.ScrollLockOff;
                 else if (state == true)
-                    picLockStatus.BackgroundImage = LockStatus_Indicator.Properties.Resources.ScrollLockOn;
+                    picLockStatus.Image = LockStatus_Indicator.Properties.Resources.ScrollLockOn;
             }
 
             picLockStatus.Update();

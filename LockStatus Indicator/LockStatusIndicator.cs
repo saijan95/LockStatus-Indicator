@@ -10,8 +10,9 @@ namespace LockStatus_Indicator
     public class LockStatusIndicator
     {
         private String keyType;
-        private bool keyStatus;
         private Thread displayThread;
+        private bool keyStatus;
+
         public LockStatusIndicator(String key, bool status)
         {
             keyType = key;
@@ -25,10 +26,10 @@ namespace LockStatus_Indicator
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLockStatusDisplay(keyType, keyStatus));
+            Application.ExitThread();
+            displayThread.Abort();
             displayThread = null;
             GC.Collect();
         }
-
-       
     }
 }
