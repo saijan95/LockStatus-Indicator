@@ -22,7 +22,6 @@ namespace LockStatus_Indicator
 
             if (key.Equals("Caps"))
             {
-                Console.WriteLine(state);
                 if (state == false)
                     picLockStatus.Image = LockStatus_Indicator.Properties.Resources.CapsLockOff;
                 else if (state == true)
