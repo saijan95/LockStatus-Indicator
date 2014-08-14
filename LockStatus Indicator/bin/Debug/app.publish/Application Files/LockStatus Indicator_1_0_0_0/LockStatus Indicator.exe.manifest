@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="LockStatus Indicator.exe" version="1.0.0.0" publicKeyToken="abeb86438f808603" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Icon 1.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="LockStatus Indicator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="LockStatus Indicator.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LockStatus Indicator.exe" size="804864">
+      <assemblyIdentity name="LockStatus Indicator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>PjFY6wcMVL7V437c5d6NE/0yIxHbcUqsqhNR71gsH+E=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Icon 1.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tkCqM028co14SBgRzZ2U5FEj9sFC/+LoEkNjNHqk0E8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="LockStatus Indicator.exe.config" size="1436">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QnwJiky33P8zrw2L8sckyYiFkwWPOg5NmrGeyMVhRMc=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=SAI-PC\saija_000" issuerKeyHash="b606664a08b916d58093e154db6c9de493cfbab3" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Kaqe/9kWA5fJ0ZduGNhDAWsYnu1xk40WvCTVc5EhPJE=</DigestValue></Reference></SignedInfo><SignatureValue>QHHyHsl8cpkOlQXTADgZQaOFoCbQAcd0JEFtPcr8A7Vzr4OPk903JL/3enqpaUqE+vgZ6yPosE3hOkGv4T761FLqx8paeorF1H93aZHvP5RUh/n/W4yAh/ozZww6xyc/LVNXoIypfeUHD3LW1Nty50WWEmeoxcFD6Bld8P5YHmA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ifqblWvuAtoxQqel6YHiwIJt9/3EunAcJ/6ki4VEWsxiNQEukWkr6stctSXFmfd4QmQwcjWmyGDK7hDreDv2+xWHik8PI4GeZJtgzBOxc6xolrE+/uNl4hJ4UYXpazAq+S5jdkdYYaNf+gyFcXcmPTO3bzZ2zey4WJ9lsO7EwL8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="913c219173d524bc168d9371ed9e186b0143d8186e97d1c9970316d9ff9eaa29" Description="" Url=""><as:assemblyIdentity name="LockStatus Indicator.exe" version="1.0.0.0" publicKeyToken="abeb86438f808603" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=SAI-PC\saija_000</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>GlON7rY8dmVDTo+nU4FcBVBMQ+J+ToTdO875aUUkXt4=</DigestValue></Reference></SignedInfo><SignatureValue>O4saZubI+jkWl8DTGfxP2ieLwJusvoNXB7U0xuguBI+lY/lntBbqoviXbhPb22MeBMCWRQg2X5tiYKXFlfq+3yx5PNg6srH96Ci+mpcSjUnvoFH37PernoNo1vVm9YdVnRPhitgJeIoZ1oe0DC7rUmmcX+1MafxW6KzZ65pQJoI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ifqblWvuAtoxQqel6YHiwIJt9/3EunAcJ/6ki4VEWsxiNQEukWkr6stctSXFmfd4QmQwcjWmyGDK7hDreDv2+xWHik8PI4GeZJtgzBOxc6xolrE+/uNl4hJ4UYXpazAq+S5jdkdYYaNf+gyFcXcmPTO3bzZ2zey4WJ9lsO7EwL8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQGf3HxLaAxZ5CQKbJOiHtOzANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDHiAAUwBBAEkALQBQAEMAXABzAGEAaQBqAGEAXwAwADAAMDAeFw0xNDA4MTAxOTM1NTNaFw0xNTA4MTEwMTM1NTNaMCsxKTAnBgNVBAMeIABTAEEASQAtAFAAQwBcAHMAYQBpAGoAYQBfADAAMAAwMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJ+puVa+4C2jFCp6XpgeLAgm33/cS6cBwn/qSLhURazGI1AS6RaSvqy1y1JcWZ93hCZDByNabIYMruEOt4O/b7FYeKTw8jgZ5km2DME7FzrGiWsT7+42XiEnhRhelrMCr5LmN2R1hho1/6DIVxdyY9M7dvNnbN7LhYn2Ww7sTAvwIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAHqaFG2fFCQYV0ZTkeOWGxAuDLXjF2GdTDnAX2na2TNPtO0HDjEJq8YCb2ZaiWjljWtw1FxcRS1y8QlL7hp4v8CafYoqQEDC4tSHTSjadiGnQsWGHcS7MbVuMOkwv7hmoxWuBXkQGsbKdXYPLpfyL8Yw/wBc/swbqy7AVGMDYsfT</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

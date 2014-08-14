@@ -7,29 +7,31 @@ using System.Threading;
 
 namespace LockStatus_Indicator
 {
-    public class LockStatusIndicator
+    class LockStatusIndicator
     {
-        private String keyType;
-        private Thread displayThread;
-        private bool keyStatus;
+        private static Mutex mut;
 
-        public LockStatusIndicator(String key, bool status)
+        [STAThread]
+        public static void Main(String[] args)
         {
-            keyType = key;
-            keyStatus = status;
-            displayThread = new Thread(startDisplay);
-            displayThread.Start();
-        }
+            mut = new Mutex();
 
-        private void startDisplay()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLockStatusDisplay(keyType, keyStatus));
-            Application.ExitThread();
-            displayThread.Abort();
-            displayThread = null;
-            GC.Collect();
+            if (mut.WaitOne(1000))
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+
+                if (args.Length > 0)
+                    Application.Run(new frmLockStatusSettings(args[0]));
+                else
+                    Application.Run(new frmLockStatusSettings(null));
+
+                Application.Exit();
+            }
+            else
+            {
+                MessageBox.Show("LockStatus Indicator is already open.", "Error");
+            }
         }
     }
 }

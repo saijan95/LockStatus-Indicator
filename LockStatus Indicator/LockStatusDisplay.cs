@@ -44,7 +44,7 @@ namespace LockStatus_Indicator
 
             picLockStatus.Update();
             
-            killTimer.Interval = 800;
+            killTimer.Interval = Properties.Settings.Default.Time;
             killTimer.Start();
             
         }

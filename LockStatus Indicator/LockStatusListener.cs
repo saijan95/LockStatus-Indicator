@@ -16,7 +16,7 @@ using System.Diagnostics;
 
 namespace LockStatus_Indicator
 {
-    public class GlobalKeyboardListener
+    public class LockStatusListener
     {
         private const int WH_KEYBOARD_LL = 13;
         private const int WM_KEYDOWN = 0x0100;
@@ -26,22 +26,20 @@ namespace LockStatus_Indicator
         private KeyboardProc keyboardProc;
         private IntPtr hhk;
         private bool capsLock, numLock, scrollLock;
-
-        public GlobalKeyboardListener()
-        {
-            calibrate();
-        }
+        private bool chkCapsLock, chkNumLock, chkScrollLock;
 
         public void startListening()
         {
+            calibrate();
+            setSettings();
+
             keyboardProc = callNextHook;
             hhk = setHook(keyboardProc);
             Application.Run();
         }
 
-        private void stopListening()
+        public void stopListening()
         {
-            Application.Exit();
             UnhookWindowsHookEx(hhk);
         }
 
@@ -59,26 +57,39 @@ namespace LockStatus_Indicator
             if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
             {
                 int vkCode = Marshal.ReadInt32(lParam);
-                LockStatusIndicator lockStatusIndicator;
+                frmLockStatusDisplay lockStatusIndicator = null;
 
                 if (vkCode == VK_CAPITAL) 
                 {
-                    capsLock = !capsLock;
-                    lockStatusIndicator = new LockStatusIndicator("Caps", capsLock);   
+                    if (chkCapsLock)
+                    {
+                        capsLock = !capsLock;
+                        lockStatusIndicator = new frmLockStatusDisplay("Caps", capsLock);
+                        lockStatusIndicator.Show();
+                    }
                 }
                     
                 else if(vkCode == VK_NUMLOCK) 
                 {
-                    numLock = !numLock;
-                    lockStatusIndicator = new LockStatusIndicator("Num", numLock);
+                    if (chkNumLock)
+                    {
+                        numLock = !numLock;
+                        lockStatusIndicator = new frmLockStatusDisplay("Num", numLock);
+                        lockStatusIndicator.Show();
+                    }
                 }
                     
                 else if(vkCode == VK_SCROLL)
                 {
-                    scrollLock = !scrollLock;
-                    lockStatusIndicator = new LockStatusIndicator("Scroll", scrollLock);
+                    if (chkScrollLock)
+                    {
+                        scrollLock = !scrollLock;
+                        lockStatusIndicator = new frmLockStatusDisplay("Scroll", scrollLock);
+                        lockStatusIndicator.Show();
+                    }
                 }
 
+                
                 lockStatusIndicator = null;
                 GC.Collect();
             }
@@ -90,6 +101,13 @@ namespace LockStatus_Indicator
             capsLock = (GetKeyState(VK_CAPITAL) & 1) == 1;
             numLock = (GetKeyState(VK_NUMLOCK) & 1) == 1;
             scrollLock = (GetKeyState(VK_SCROLL) & 1) == 1;
+        }
+
+        private void setSettings()
+        {
+            chkCapsLock = Properties.Settings.Default.CapsLock;
+            chkNumLock = Properties.Settings.Default.NumLock;
+            chkScrollLock = Properties.Settings.Default.ScrollLock;
         }
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
@@ -109,13 +127,5 @@ namespace LockStatus_Indicator
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true, CallingConvention = CallingConvention.Winapi)]
         public static extern short GetKeyState(int keyCode);
-       
-        public static void Main(String[] args)
-        {
-            GlobalKeyboardListener gkl = new GlobalKeyboardListener();
-
-            Thread gklThread = new Thread(new ThreadStart(gkl.startListening));
-            gklThread.Start();
-        }
     }
 }
